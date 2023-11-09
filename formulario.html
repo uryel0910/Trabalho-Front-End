@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formulario</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/iconJujutsu.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="alinhar-itens">
+      <section class="alinhar-itens">
+        <div>
+          <a href="sinopse.html" class="font-header-nao-selecionado"
+            >sinopse</a
+          >
+        </div>
+        <div>
+          <img src="assets/img/barrinha.svg" alt="barrinha" />
+        </div>
+        <div>
+          <a href="personagens.html" class="font-header-nao-selecionado"
+            >personagens</a
+          >
+        </div>
+        <div>
+          <a
+            href="https://pt.wikipedia.org/wiki/Jujutsu_Kaisen"
+            target="_blank"
+          >
+            <img
+              src="assets/img/logoJujutsu.svg"
+              alt="Jujutsu Logo"
+              style="width: 170px; height: 52px"
+            />
+          </a>
+        </div>
+        <div>
+          <a href="energias.html" class="font-header-nao-selecionado"
+            >energias
+          </a>
+        </div>
+        <div>
+          <img
+            src="assets/img/barrinha.svg"
+            alt="barrinha"
+            style="transform: rotate(80deg)"
+          />
+        </div>
+        <div>
+          <a href="tecnicas.html" class="font-header-nao-selecionado"
+            >técnicas
+          </a>
+        </div>
+      </section>
+    </header>
+    <section class="form-jujutsu">
+      <h1 class="titulo-formulario">Torne-se um Feiticeiro Jujutsu</h1>
+      <form class="formulario-jujutsu">
+        <div style="display: flex;">
+          <label for="nomeJujutsu" class="pre-input">Nome</label>
+          <input class="caixa-form-jujutsu" type="text" id="nomeJujutsu" name="nomeJujutsu" class="estilo-inputs" autocomplete="off"/>
+        </div>
+        <div style="display: flex;">
+          <label for="nomeJujutsu" class="pre-input">Idade</label>
+          <input class="caixa-form-jujutsu" type="number" id="idadeJujutsu" name="idadeJujutsu" class="estilo-inputs" autocomplete="off"/>
+        </div>
+        <div style="display: flex;">
+          <label for="nomeJujutsu" class="pre-input">Email</label>
+          <input class="caixa-form-jujutsu" type="text" id="emailJujutsu" name="emailJujutsu" class="estilo-inputs" autocomplete="off"/>
+        </div>
+      </form>
+      <h2 class="titulo-escolhaSeuGrau">Escolha seu Grau</h2>
+      <div class="div-botoes-graus">
+          <button id="special" class="botao-graus">
+              Special
+          </button>
+          <button id="grau1" class="botao-graus">
+              Grau I
+          </button>
+          <button id="grau2" class="botao-graus">
+              Grau II
+          </button>
+          <button id="grau3" class="botao-graus">
+              Grau III
+          </button>
+      </div>
+      <button type="submit" class="botao-enviar" style="margin-top: 100px; font-size: 30px;"> Enviar</button>
+    </section>
+    <script src="botao.js"></script>
+  </body>
+</html>

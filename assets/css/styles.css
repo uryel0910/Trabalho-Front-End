@@ -1,0 +1,576 @@
+:root {
+    --altura-header: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("/assets/img/texturaFundo.png"), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.71) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a0a0a;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    z-index: 99999;
+    font-size: 15px;
+    font-family: "Montserrat";
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.89) 0%, rgba(0, 0, 0, 0.00) 100%);
+    backdrop-filter: blur(12px);
+    width: 100%;
+    padding-block: 12px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.alinhar-itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.3%;
+}
+
+.font-header-selecionado {
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.font-header-nao-selecionado {
+    color: #A5A5A5;
+    font-style: normal;
+    font-weight: 300;
+    transition: 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.font-texto {
+    font-size: 80%;
+    color: #FFF;
+    font-family: "Montserrat";
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.content-pagina-initial {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-inline: auto;
+    max-width: 80%;
+    column-gap: 25%;
+    align-items: center;
+}
+
+.cover-manga {
+    border: 2px solid #FFF;
+    width: 270px;
+    height: 401px;
+    transform: rotate(-2.675deg);
+}
+
+.capa-manga {
+    width: 105%;
+    height: 100%;
+    transform: rotate(5.693deg);
+    transition: 0.5s;
+}
+
+.assistir-jujutsu {
+    background: none;
+    font-family: "Montserrat";
+    color: #FFF;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid #FFF;
+    width: 230px;
+    transition: 0.5s;
+}
+
+.nomePrincipalPersonagem {
+    color: #FFF;
+}
+
+.nomeSecundarioPersonagem {
+    color: transparent;
+    margin-left: -20px;
+    -webkit-text-stroke: 0.3px white;
+}
+
+.nomePrincipalPersonagem,
+.nomeSecundarioPersonagem {
+    z-index: 1;
+    position: absolute;
+    font-family: "Montserrat";
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+.section-personagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+}
+
+.ajustandoTamanhoImg {
+    height: 95%;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tirandoGap {
+    margin-left: -70px;
+}
+
+.alinhar-texto {
+    margin-top: -150px;
+    text-align: center;
+}
+
+.botao-troca-personagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    background: none;
+    padding: 40px 20px 40px 20px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    transition: 0.7s;
+    z-index: 3;
+}
+
+.botao-troca-personagem-2 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    background: none;
+    padding: 40px 20px 40px 20px;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    transition: 0.7s;
+    z-index: 3;
+}
+
+.estilo-imagem {
+    filter: grayscale(100%) brightness(60%);
+    transition: 0.7s;
+    margin-top: 30px;
+}
+
+.background-energias {
+    background: url("/assets/img/planoDeFundoEnergias.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.content-pagina-energias {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    margin-inline: auto;
+    width: 100%;
+    column-gap: 25%;
+    padding-top: calc(125px + var(--altura-header));
+}
+
+.estilo-texto-paginaEnergia-principal1 {
+    color: transparent;
+    text-shadow: 0px 0px 15px rgba(215, 17, 17, 1);
+    margin-left: 20%;
+    -webkit-text-stroke: 0.3px white;
+    transition: 0.5s;
+}
+
+.estilo-texto-paginaEnergia-secundario1 {
+    color: #FFF;
+    text-shadow: 0px 0px 15px rgba(215, 17, 17, 1);
+}
+
+.estilo-texto-paginaEnergia-principal1,
+.estilo-texto-paginaEnergia-secundario1,
+.estilo-texto-paginaEnergia-principal2,
+.estilo-texto-paginaEnergia-secundario2 {
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.estilo-texto-paginaEnergia-principal2 {
+    color: transparent;
+    -webkit-text-stroke: 0.3px white;
+    transition: 0.5s;
+    text-shadow: 0px 0px 15px rgb(13, 78, 217);
+    margin-right: 20%;
+}
+
+.estilo-texto-paginaEnergia-secundario2 {
+    color: #FFF;
+    text-shadow: 0px 0px 15px rgb(13, 78, 217);
+}
+
+.textos-energias {
+    position: absolute;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 12px;
+    color: #FFF;
+    width: 350px;
+    transition: 0.5s;
+}
+
+.hover-energiaReversa {
+    color: #FFF;
+    text-shadow: 0px 0px 15px rgba(215, 17, 17, 1);
+    transition: 0.5s;
+}
+
+.hover-energiaAmaldicoada {
+    color: #FFF;
+    text-shadow: 0px 0px 15px rgb(13, 78, 217);
+    transition: 0.5s;
+}
+
+.alinhamento-tabela {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: var(--altura-header);
+}
+
+.header-tabela-tecnicas {
+    background-color: #FFF;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.header-tabela-tecnicas-menor {
+    font-weight: 100;
+    font-size: 19px;
+    border-top: 2px solid black;
+}
+
+.ajustando-tamanho {
+    width: 1200px;
+}
+
+.alinhar-imagem-tecnicas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.imagem-tecnicas {
+    padding: 10px;
+    width: 190px;
+    height: 110px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.descricao-tecnicas {
+    padding-left: 10px;
+    font-family: "Montserrat";
+    font-weight: 300;
+    color: #FFF;
+    font-size: 13px;
+}
+
+.grau-tecnicas {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+}
+
+.linha-tabela {
+    transition: 0.5s;
+}
+
+.form-jujutsu {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formulario-jujutsu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.caixa-form-jujutsu {
+    border: 1px solid #FFF;
+    margin-right: 10px;
+    width: 350px;
+    height: 35px;
+    background-color: transparent;
+    outline: none;
+    color: #FFF;
+    font-family: "Montserrat";
+    font-weight: 300;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.pre-input {
+    padding-right: 15px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 90px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.titulo-formulario {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #FFF;
+    transition: 0.5s;
+    margin-top: 70px;
+}
+
+.titulo-escolhaSeuGrau {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFF;
+    transition: 0.5s;
+    margin-top: 20px;
+}
+
+.div-botoes-graus {
+    display: flex;
+    margin-top: 15px;
+    gap: 20px;
+}
+
+.botao-graus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid #FFF;
+    font-family: "Montserrat";
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botao-graus-ativo {
+    border: 1px solid transparent;
+    background: #FFF;
+    color: black;
+}
+
+.botao-graus-ativo:hover {
+    background-color: white !important;
+}
+
+.botao-enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid #FFF;
+    font-family: "Montserrat";
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0px;
+    z-index: 999;
+
+    background-color: black;
+    mix-blend-mode: hue;
+
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+}
+
+.overlay:hover { 
+    opacity: 0;
+}
+
+.overlay-esquerda {
+    right: 50%;
+}
+
+.overlay-direita {
+    left: 50%;
+}
+
+.botao-enviar:hover {
+    background: #ffffff16;
+    box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.9);
+}
+
+
+.botao-graus:hover {
+    background: #ffffff16;
+    box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.9);
+}
+
+.titulo-formulario:hover {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.titulo-escolhaSeuGrau:hover {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.linha-tabela:hover .imagem-tecnicas,
+.linha-tabela:hover {
+    filter: grayscale(0) saturate(1.5);
+    scale: 1.025;
+}
+
+.alinhar-imagem-tecnicas:hover {
+    scale: 1.025;
+}
+
+.imagem-tecnicas:hover {
+    filter: grayscale(0) saturate(1.5);
+}
+
+.hover-energiaReversa:hover {
+    text-shadow: 0px 0px 15px rgba(215, 17, 17, 1);
+}
+
+.hover-energiaAmaldicoada:hover {
+    text-shadow: 0px 0px 15px rgb(13, 78, 217);
+}
+
+.ajustandoTamanhoImg:hover>.nomePrincipalPersonagem,
+.ajustandoTamanhoImg:hover>.nomeSecundarioPersonagem {
+    text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.estilo-imagem:hover {
+    filter: grayscale(0) saturate(1.5);
+    margin-top: -5%;
+}
+
+.box-shadow:hover {
+    background: #ffffff16;
+    box-shadow: 0px 0px 8px 1px rgba(255, 255, 255, 0.9);
+}
+
+.capa-manga:hover {
+    transform: rotate(-5.693deg);
+    transform: scale(1.2);
+}
+
+.font-header-selecionado:hover {
+    text-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.font-header-nao-selecionado:hover {
+    text-shadow: 0px 0px 15px #A5A5A5;
+}
+
+@media screen and (min-width: 1500px) {
+    .cover-manga {
+        width: 416px;
+        height: 650px;
+    }
+
+    .font-texto {
+        font-size: 130%;
+        gap: 60px;
+    }
+
+    .assistir-jujutsu {
+        width: 280px;
+        font-size: 18px;
+    }
+
+    .tirandoGap {
+        margin-left: -125px;
+    }
+}
+
+@media screen and (height: 768px) {
+    .tirandoGap {
+        margin-left: -90px;
+    }
+}
+
+#carrosel1 {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1000ms;
+}
+
+#carrosel2 {
+    position: absolute;
+    left: 100%;
+    width: 90%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1000ms;
+}
