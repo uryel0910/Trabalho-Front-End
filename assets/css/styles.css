@@ -10,7 +10,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("/assets/img/texturaFundo.png"), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.71) 100%);
+    background-image: url("assets/img/texturaFundo.png"), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.71) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100vw;
@@ -190,7 +190,7 @@ table {
 }
 
 .background-energias {
-    background: url("/assets/img/planoDeFundoEnergias.png");
+    background: url("../img/planoDeFundoEnergias.png");
     background-position: center;
     background-size: contain;
 }
