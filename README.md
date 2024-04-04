@@ -1,2 +1,2 @@
 # Trabalho-Front-End
-trabalho da faculdade
+Trabalho final relacionado a máteria de Introdução a computação no primeiro ano da faculdade
